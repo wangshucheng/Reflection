@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
-project(TestCMake VERSION 0.1.0)
-message("CMAKE_PROJECT_VERSION = ${CMAKE_PROJECT_VERSION}")
+project(Reflection)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(TestCMake main.cpp)
+add_executable(Reflection main.cpp reflection/reflection.cpp reflection/reflection.h core/Vector3.cpp core/Vector3.h gen/vector3_gen.cpp gen/vector3_gen.h)

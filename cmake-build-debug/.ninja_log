@@ -1,0 +1,9 @@
+# ninja log v5
+1	24	1650383453714660825	CMakeFiles/CMakeTest.dir/core/Vector3.cpp.o	7d1e445f5877aa8c
+1	384	1650383454073303938	CMakeFiles/CMakeTest.dir/reflection/reflection.cpp.o	bb6387fed824a9da
+2	341	1650383469735334890	CMakeFiles/CMakeTest.dir/main.cpp.o	72357c21f37e7f4e
+2	324	1650383454013992912	CMakeFiles/CMakeTest.dir/gen/vector3_gen.cpp.o	90c166f3cc1b8ed5
+0	21	1650383497459014029	CMakeFiles/Reflection.dir/core/Vector3.cpp.o	346ce66a031d6bb2
+0	306	1650383497742796573	CMakeFiles/Reflection.dir/gen/vector3_gen.cpp.o	ffdbd57f7e83f506
+0	363	1650383497799632442	CMakeFiles/Reflection.dir/main.cpp.o	ff23aa38d7a201af
+0	389	1650383497819331509	CMakeFiles/Reflection.dir/reflection/reflection.cpp.o	42b708efd1d2e8ab
