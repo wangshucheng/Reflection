@@ -1,0 +1,63 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.19"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Reflection",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Reflection::@6890427a1f51a3e7e1df",
+<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-124f933216619863a37e.json
+					"jsonFile" : "target-Reflection-Debug-81efdcbaa2259d9c6dab.json",
+=======
+					"jsonFile" : "target-Reflection-Debug-35e4406db408623145fd.json",
+>>>>>>> af865bc06a4756a3fe2e49194c4ffdc933d2fe80:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-c952db71a4411ba86b22.json
+					"name" : "Reflection",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/STUDY/Reflection/cmake-build-debug",
+		"source" : "D:/STUDY/Reflection"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}
