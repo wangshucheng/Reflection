@@ -9,7 +9,7 @@ namespace Pilot
         const char* k_unknown      = "Unknown";
 
         static std::map<std::string, class_function_tuple*>      m_class_map;
-        static std::multimap<std::string, filed_function_tuple*> m_field_map;
+        static std::multimap<std::string, filed_function_tuple*> m_field_map;//有序的键/值对，但它可以保存重复的元素
         static std::map<std::string, array_function_tuple*>      m_array_map;
 
         void TypeMetaRegisterinterface::registerToFieldMap(const char* name, filed_function_tuple* value)
@@ -64,7 +64,7 @@ namespace Pilot
         {
             m_is_valid = false;
             m_fields.clear();
-
+            //遍历map，查找类名下面多少属性
             auto fileds_iter = m_field_map.equal_range(type_name);
             while (fileds_iter.first != fileds_iter.second)
             {
