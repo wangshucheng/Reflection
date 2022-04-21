@@ -5,7 +5,13 @@
 #ifndef CMAKETEST_VECTOR3_H
 #define CMAKETEST_VECTOR3_H
 
-class Vector3
+class VectorValue
+{
+public:
+    int id;
+};
+
+class Vector3 : public VectorValue
 {
 public:
     float x {0.f};

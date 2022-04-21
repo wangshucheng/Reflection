@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Reflection.exe"
-		},
-		{
-			"path" : "Reflection.pdb"
+			"path" : "Reflection"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=12.0"
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -73,16 +70,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Reflection",
-	"nameOnDisk" : "Reflection.exe",
+	"nameOnDisk" : "Reflection",
 	"paths" : 
 	{
 		"build" : ".",
@@ -105,7 +98,8 @@
 			[
 				2,
 				4,
-				5
+				5,
+				6
 			]
 		}
 	],
@@ -142,6 +136,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "gen/vector3_gen.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gen/vectorValue.h",
 			"sourceGroupIndex" : 1
 		}
 	],

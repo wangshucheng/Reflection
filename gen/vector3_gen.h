@@ -24,6 +24,15 @@ namespace TypeFieldReflectionOparator{
         static void set_y(void* instance, void* field_value){ static_cast<Vector3*>(instance)->y = *static_cast<float*>(field_value);}
         static void* get_y(void* instance){ return static_cast<void*>(&(static_cast<Vector3*>(instance)->y));}
         static bool isArray_y(){ return 0;}
+
+        static int getVector3BaseClassReflectionInstanceList(Pilot::Reflection::ReflectionInstance* &out_list, void* instance){
+            int count = 1;
+            out_list = new Pilot::Reflection::ReflectionInstance[count];
+            for (int i=0;i<count;++i){
+                out_list[i] = TypeMetaDef(VectorValue, static_cast<Vector3*>(instance));
+            }
+            return count;
+        }
     };
 }
 
@@ -45,6 +54,10 @@ void TypeWrapperRegister_Vector3(){
             &TypeFieldReflectionOparator::TypeVector3Operator::getFieldTypeName_y,
             &TypeFieldReflectionOparator::TypeVector3Operator::isArray_y);
     Pilot::Reflection::TypeMetaRegisterinterface::registerToFieldMap("Vector3", f_field_function_tuple_y);
+
+    Pilot::class_function_tuple* f_class_function_tuple_Vector_Parameter=new Pilot::class_function_tuple(
+            &TypeFieldReflectionOparator::TypeVector3Operator::getVector3BaseClassReflectionInstanceList);
+    Pilot::Reflection::TypeMetaRegisterinterface::registerToClassMap("Vector3", f_class_function_tuple_Vector_Parameter);
 }
 
 
