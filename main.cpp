@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void printInstance(Pilot::Reflection::ReflectionInstance& rinstance, void* instance)
+void printInstance(Pilot::Reflection::ReflectionInstance& rinstance)
 {
     Pilot::Reflection::FieldAccessor* fields;
     int fields_count = rinstance.m_meta.getFieldsList(fields);
@@ -14,19 +14,19 @@ void printInstance(Pilot::Reflection::ReflectionInstance& rinstance, void* insta
         auto fields_count = fields[index];
         auto fieldName = fields_count.getFieldName();
         cout<< "FieldName: " << fieldName << "    FieldName:  " << fields_count.getFieldTypeName()
-            << "     " << *(float *)(fields_count.get(instance)) << endl;
+            << "     " << *(float *)(fields_count.get(rinstance.m_instance)) << endl;
     }
 }
 
-void travelInstance(Pilot::Reflection::ReflectionInstance& rinstance, void* instance)
+void travelInstance(Pilot::Reflection::ReflectionInstance& rinstance)
 {
     Pilot::Reflection::ReflectionInstance* reflection_instance;
     int count = rinstance.m_meta.getBaseClassReflectionInstanceList(reflection_instance, rinstance.m_instance);
     for (int index = 0; index < count; index++)
     {
-        travelInstance(reflection_instance[index], instance);
+        travelInstance(reflection_instance[index]);
     }
-    printInstance(rinstance, instance);
+    printInstance(rinstance);
 }
 
 int main() {
@@ -38,11 +38,11 @@ int main() {
             Pilot::Reflection::TypeMeta::newMetaFromName("Vector3"),
             v);
 
-    travelInstance(object_instance, v);
+    travelInstance(object_instance);
 
     float x = 123;
     object_instance.m_meta.getFieldByName("x").set(v, &x);
-    travelInstance(object_instance, v);
+    travelInstance(object_instance);
     return 0;
 }
 
